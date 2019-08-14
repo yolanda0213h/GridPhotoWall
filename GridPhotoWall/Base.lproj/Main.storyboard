@@ -1,24 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="58a-gF-WZi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Grid Photo Wall-->
+        <scene sceneID="ijx-WP-XAI">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <collectionViewController id="qwF-Cd-S2c" customClass="NewCollectionViewController" customModule="GridPhotoWall" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="d4a-OQ-3Wo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="WUO-PD-DlX">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCollectionViewCell" id="A2D-4N-932" customClass="PhotoCollectionViewCell" customModule="GridPhotoWall" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="000" translatesAutoresizingMaskIntoConstraints="NO" id="Egg-2V-tix">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Egg-2V-tix" secondAttribute="trailing" id="3Le-nt-m0w"/>
+                                    <constraint firstItem="Egg-2V-tix" firstAttribute="top" secondItem="A2D-4N-932" secondAttribute="top" id="B86-LA-Sjo"/>
+                                    <constraint firstAttribute="bottom" secondItem="Egg-2V-tix" secondAttribute="bottom" id="Eul-Ow-hZY"/>
+                                    <constraint firstItem="Egg-2V-tix" firstAttribute="leading" secondItem="A2D-4N-932" secondAttribute="leading" id="XjJ-Dh-ahs"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="photoImage" destination="Egg-2V-tix" id="KyH-2G-G05"/>
+                                    <segue destination="iXi-Zw-SHl" kind="show" identifier="" destinationCreationSelector="showDetail:" id="oKe-j4-cVe"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="qwF-Cd-S2c" id="Jgd-Dl-avE"/>
+                            <outlet property="delegate" destination="qwF-Cd-S2c" id="AG7-ap-Ybx"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Grid Photo Wall" id="uHP-kp-iWi">
+                        <barButtonItem key="backBarButtonItem" title="照片牆" id="BnO-al-pJ1"/>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z3q-OJ-sOX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="838" y="121"/>
+        </scene>
+        <!--One Photo View Controller-->
+        <scene sceneID="n0s-qE-SzM">
+            <objects>
+                <viewController id="iXi-Zw-SHl" customClass="OnePhotoViewController" customModule="GridPhotoWall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mmS-Zi-mw2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZWz-Fh-VGO">
+                                <rect key="frame" x="0.0" y="337.5" width="414" height="221"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZWz-Fh-VGO" firstAttribute="centerY" secondItem="mmS-Zi-mw2" secondAttribute="centerY" id="rmB-Q9-u53"/>
+                            <constraint firstItem="Ych-Hv-pgk" firstAttribute="trailing" secondItem="ZWz-Fh-VGO" secondAttribute="trailing" id="xb5-XN-AuU"/>
+                            <constraint firstItem="ZWz-Fh-VGO" firstAttribute="leading" secondItem="Ych-Hv-pgk" secondAttribute="leading" id="yWv-8O-flN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ych-Hv-pgk"/>
+                    </view>
+                    <connections>
+                        <outlet property="oneImage" destination="ZWz-Fh-VGO" id="NIn-UX-20h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b4B-4L-I5A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="121"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YI5-R1-hke">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="58a-gF-WZi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xbt-ps-ZEg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qwF-Cd-S2c" kind="relationship" relationship="rootViewController" id="iRk-Dw-9Ba"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXe-fb-Ejs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="120.53571428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="000" width="596" height="596"/>
+    </resources>
 </document>

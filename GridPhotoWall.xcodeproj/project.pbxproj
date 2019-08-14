@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAB8C9A32301A5A400C76EC9 /* OnePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB8C9A22301A5A400C76EC9 /* OnePhotoViewController.swift */; };
 		AADBABE722F2EC82002CADC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADBABE622F2EC82002CADC0 /* AppDelegate.swift */; };
-		AADBABE922F2EC82002CADC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADBABE822F2EC82002CADC0 /* ViewController.swift */; };
 		AADBABEC22F2EC82002CADC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADBABEA22F2EC82002CADC0 /* Main.storyboard */; };
 		AADBABEE22F2EC84002CADC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AADBABED22F2EC84002CADC0 /* Assets.xcassets */; };
 		AADBABF122F2EC84002CADC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADBABEF22F2EC84002CADC0 /* LaunchScreen.storyboard */; };
+		AADBABF922F2F407002CADC0 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADBABF822F2F407002CADC0 /* PhotoCollectionViewCell.swift */; };
+		AADBABFB22F2F481002CADC0 /* NewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADBABFA22F2F481002CADC0 /* NewCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AAB8C9A22301A5A400C76EC9 /* OnePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePhotoViewController.swift; sourceTree = "<group>"; };
 		AADBABE322F2EC82002CADC0 /* GridPhotoWall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridPhotoWall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADBABE622F2EC82002CADC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AADBABE822F2EC82002CADC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AADBABEB22F2EC82002CADC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AADBABED22F2EC84002CADC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AADBABF022F2EC84002CADC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AADBABF222F2EC84002CADC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AADBABF822F2F407002CADC0 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		AADBABFA22F2F481002CADC0 /* NewCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				AADBABE622F2EC82002CADC0 /* AppDelegate.swift */,
-				AADBABE822F2EC82002CADC0 /* ViewController.swift */,
 				AADBABEA22F2EC82002CADC0 /* Main.storyboard */,
+				AAB8C9A22301A5A400C76EC9 /* OnePhotoViewController.swift */,
+				AADBABFA22F2F481002CADC0 /* NewCollectionViewController.swift */,
+				AADBABF822F2F407002CADC0 /* PhotoCollectionViewCell.swift */,
 				AADBABED22F2EC84002CADC0 /* Assets.xcassets */,
 				AADBABEF22F2EC84002CADC0 /* LaunchScreen.storyboard */,
 				AADBABF222F2EC84002CADC0 /* Info.plist */,
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AADBABE922F2EC82002CADC0 /* ViewController.swift in Sources */,
 				AADBABE722F2EC82002CADC0 /* AppDelegate.swift in Sources */,
+				AADBABF922F2F407002CADC0 /* PhotoCollectionViewCell.swift in Sources */,
+				AAB8C9A32301A5A400C76EC9 /* OnePhotoViewController.swift in Sources */,
+				AADBABFB22F2F481002CADC0 /* NewCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
