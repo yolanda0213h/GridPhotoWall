@@ -10,7 +10,6 @@ import UIKit
 
 private let reuseIdentifier = "PhotoCollectionViewCell"
 var imageNames = ["009"]
-var cellId = ""
 class NewCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
